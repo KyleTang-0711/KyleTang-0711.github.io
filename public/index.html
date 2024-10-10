@@ -1,43 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta charset="UTF-8" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Tang Tang 唐堂</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/57fb8d417e.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+      h1 {
+        color: #333;
+        font-weight: 500;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+      a {
+        color: #4285f4;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      a:hover {
+        color: #2a73e8;
+      }
+      .social-icons a {
+        margin-right: 10px;
+        color: #555;
+        transition: color 0.2s ease;
+      }
+      .social-icons a:hover {
+        color: #4285f4;
+      }
+      #myPicture {
+        border-radius: 50%;
+        border: 2px solid #ddd;
+        margin-right: 20px;
+      }
+      #DocInfo {
+        padding: 20px;
+      }
+      table {
+        width: 100%;
+      }
+      td {
+        vertical-align: top;
+      }
+      .intro {
+        line-height: 1.6;
+      }
+      .status-box {
+        background: #f9f9f9;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      .contact-info {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .contact-info span {
+        margin-left: 5px;
+        font-size: 18px;
+        color: #555;
+      }
+    </style>
+    <script>
+      window.onload = choosePic;
+      var myPix = [
+        "E:/personal/laboratory/my-website/about/myphoto.png",
+      ];
+      function choosePic() {
+        var randomNum = Math.floor(Math.random() * myPix.length);
+        document.getElementById("myPicture").src = myPix[randomNum];
+      }
+      function lastUpdate() {
+        var x = document.lastModified.substr(0, 10);
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <body onload="lastUpdate()">
+    <div class="content">
+      <div id="container">
+        <table>
+          <tbody>
+            <tr>
+              <td style="text-align: center; vertical-align: middle; height: 200px;">
+                <img
+                  id="myPicture"
+                  src="E:/personal/laboratory/my-website/about/tangtang.jpg"
+                  alt="My Photo"
+                  width="150px"
+                  style="border-radius: 50%;"
+                />
+              </td>
+              
+              
+              <td>
+                <div id="DocInfo">
+                  <h1>Tang Tang  堂唐</h1>
+                  <div class="contact-info" style="display: flex; align-items: center;">
+                    <span class="fa fa-envelope" style="font-size: 30px; margin-right: 10px;"></span>
+                    <a href="mailto:814678831@qq.com" style="text-decoration: none; font-size: 18px;">
+                      814678831@qq.com
+                    </a>
+                  </div>
+                  <div class="social-icons" style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
+                    <a href="https://github.com/KyleTang-0711">
+                      <span class="fa-brands fa-github" style="font-size: 30px;"></span>
+                    </a>
+                    <a href="https://huggingface.co/Kyle0711">
+                      <img
+                        src="E:/personal/laboratory/my-website/about/huggingface_logo-noborder.svg"
+                        alt="Hugging Face"
+                        width="30px"
+                        height="30px"
+                      />
+                    </a>
+                  </div>
+                  
+                    </a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        <h1>个人简历</h1>
+        <div class="intro">
+          <b>目前就读于
+            <span style="color: brown">重庆邮电大学</span> (<a
+              href="https://software.cqupt.edu.cn/"
+              >软件工程学院</a
+            >) 加入了 <span style="color: brown">网络空间与信息安全实验室</span>。
+            <br /><br />
+            如果对我感兴趣，请通过邮箱联系我。
+          </b>
+        </div>
+
+        <h1>近期状态</h1>
+        <div class="status-box">
+          [2024/05/01] 加入
+          <b style="color: brown">网络空间与信息安全实验室</b>
+          <br />
+          [2022/09/01] 进入
+          <b style="color: brown">重庆邮电大学</b> 学习
+        </div>
+
+        <h1>论文发表</h1>
+        <div>
+          请访问我的
+          <a href="#">Google Scholar</a>
+          查看我的研究成果。
+        </div>
+
+        <h1>科研项目</h1>
+        <div>
+          [2024]基于深度学习的泪膜破裂检测
+        </div>
+
+        <h1>博客</h1>
+        <div>
+          等待更新
+        </div>
+
+        <div align="center">
+          <div>
+            <script
+              type="text/javascript"
+              src="//rf.revolvermaps.com/0/0/6.js?i=5defqxh6kgm&amp;m=1&amp;c=ff0000&amp;cr1=ffffff&amp;f=ubuntu&amp;l=0&amp;s=300&amp;bv=100&amp;hi=20"
+              async
+            ></script>
+          </div>
+          <strong>
+            网页最后更新于 
+            <span style="color: rgb(191, 17, 226)" id="demo"></span>
+          </strong>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
