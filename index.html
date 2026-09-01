@@ -1,211 +1,356 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Tang Tang 唐堂</title>
-    <link href="./css/style.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-2.2.0.min.js"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/57fb8d417e.js"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      body {
-        font-family: "Roboto", sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0;
-        padding: 0;
-      }
-      .content {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        background: #ffffff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-      }
-      h1 {
-        color: #333;
-        font-weight: 500;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-      }
-      a {
-        color: #4285f4;
-        text-decoration: none;
-        transition: color 0.2s ease;
-      }
-      a:hover {
-        color: #2a73e8;
-      }
-      .social-icons a {
-        margin-right: 10px;
-        color: #555;
-        transition: color 0.2s ease;
-      }
-      .social-icons a:hover {
-        color: #4285f4;
-      }
-      #myPicture {
-        border-radius: 50%;
-        border: 2px solid #ddd;
-        margin-right: 20px;
-      }
-      #DocInfo {
-        padding: 20px;
-      }
-      table {
-        width: 100%;
-      }
-      td {
-        vertical-align: top;
-      }
-      .intro {
-        line-height: 1.6;
-      }
-      .status-box {
-        background: #f9f9f9;
-        padding: 10px;
-        border-radius: 5px;
-        margin-top: 10px;
-      }
-      .contact-info {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-      }
-      .contact-info span {
-        margin-left: 5px;
-        font-size: 18px;
-        color: #555;
-      }
-    </style>
-    <script>
-      window.onload = choosePic;
-      var myPix = [
-        "E:/personal/laboratory/my-website/about/myphoto.png",
-      ];
-      function choosePic() {
-        var randomNum = Math.floor(Math.random() * myPix.length);
-        document.getElementById("myPicture").src = myPix[randomNum];
-      }
-      function lastUpdate() {
-        var x = document.lastModified.substr(0, 10);
-        document.getElementById("demo").innerHTML = x;
-      }
-    </script>
-  </head>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tang Tang · 个人主页</title>
 
-  <body onload="lastUpdate()">
-    <div class="content">
-      <div id="container">
-        <table>
-          <tbody>
-            <tr>
-              <td style="text-align: center; vertical-align: middle; height: 200px;">
-                <img
-                  id="myPicture"
-                  src="about\tangtang.jpg"
-                  alt="My Photo"
-                  width="150px"
-                  style="border-radius: 50%;"
-                />
-              </td>
-              
-              
-              <td>
-                <div id="DocInfo">
-                  <h1>Tang Tang  堂唐</h1>
-                  <div class="contact-info" style="display: flex; align-items: center;">
-                    <span class="fa fa-envelope" style="font-size: 30px; margin-right: 10px;"></span>
-                    <a href="mailto:814678831@qq.com" style="text-decoration: none; font-size: 18px;">
-                      814678831@qq.com
-                    </a>
-                  </div>
-                  <div class="social-icons" style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
-                    <a href="https://github.com/KyleTang-0711">
-                      <span class="fa-brands fa-github" style="font-size: 30px;"></span>
-                    </a>
-                    <a href="https://huggingface.co/Kyle0711">
-                      <img
-                        src="about\huggingface_logo-noborder.svg"
-                        alt="Hugging Face"
-                        width="30px"
-                        height="30px"
-                      />
-                    </a>
-                  </div>
-                  
-                    </a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+  <!-- ✏️ ===== 修改区：基础信息（改完这里，全站生效）===== -->
+  <meta name="description" content="Tang Tang 的个人主页 — 记录代码、项目与热爱">
+  <meta property="og:title" content="Tang Tang · 个人主页">
+  <meta property="og:description" content="记录代码、项目与热爱">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kyletang-0711.github.io">
+  <!-- ✏️ ===== 修改区结束 ===== -->
 
-        <h1>个人简历</h1>
-        <div class="intro">
-          <b>目前就读于
-            <span style="color: brown">重庆邮电大学</span> (<a
-              href="https://software.cqupt.edu.cn/"
-              >软件工程学院</a
-            >) 加入了 <span style="color: brown">网络空间与信息安全实验室</span>。
-            <br /><br />
-            如果对我感兴趣，请通过邮箱联系我。
-          </b>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 背景装饰：网格 + 光晕 -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--tl" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--br" aria-hidden="true"></div>
+
+  <!-- ══════════ 导航栏 ══════════ -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo">
+        <span class="nav__prompt">~/$</span> kyletang-0711<span class="cursor cursor--nav">_</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#top" class="nav__link">./home</a></li>
+        <li><a href="#about" class="nav__link">./about</a></li>
+        <li><a href="#skills" class="nav__link">./skills</a></li>
+        <li><a href="#projects" class="nav__link">./projects</a></li>
+        <li><a href="#github" class="nav__link">./github</a></li>
+        <li><a href="#contact" class="nav__link">./contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ══════════ Hero ══════════ -->
+    <header class="hero section">
+      <div class="hero__grid">
+
+        <!-- 左：头像 -->
+        <div class="hero__avatar-wrap">
+          <div class="hero__avatar-ring">
+            <!-- ✏️ 想换头像？替换 src 为你的图片路径，如 assets/avatar.jpg -->
+            <img class="hero__avatar"
+                 src="https://avatars.githubusercontent.com/u/149354627?v=4"
+                 alt="Tang Tang 的 GitHub 头像"
+                 onerror="this.src='assets/avatar-fallback.svg'">
+          </div>
+          <div class="hero__status">
+            <span class="hero__status-dot"></span> open to ideas
+          </div>
         </div>
 
-        <h1>近期状态</h1>
-        <div class="status-box">
-          [2024/05/01] 加入
-          <b style="color: brown">网络空间与信息安全实验室</b>
-          <br />
-          [2022/09/01] 进入
-          <b style="color: brown">重庆邮电大学</b> 学习
-        </div>
+        <!-- 右：介绍 -->
+        <div class="hero__intro">
+          <p class="hero__hello">// Hello, World! 我是</p>
 
-        <h1>论文发表</h1>
-        <div>
-          请访问我的
-          <a href="#">Google Scholar</a>
-          查看我的研究成果。
-        </div>
+          <!-- ✏️ 你的显示名（可以是真名或昵称） -->
+          <h1 class="hero__name">Tang Tang</h1>
 
-        <h1>科研项目</h1>
-        <div>
-          [2024]基于深度学习的泪膜破裂检测
-        </div>
+          <h2 class="hero__tagline">
+            <span class="hero__tagline-static">&gt;&nbsp;</span><span id="typewriter"></span><span class="cursor">|</span>
+          </h2>
 
-        <h1>博客</h1>
-        <div>
-          等待更新
-        </div>
+          <p class="hero__desc">
+            欢迎来到我的数字小站。这里记录我写过的代码、踩过的坑，
+            和那些让我眼睛发光的灵感瞬间。
+          </p>
 
-        <div align="center">
-         
-          <strong>
-            网页最后更新于 
-            <span style="color: rgb(191, 17, 226)" id="demo"></span>
-          </strong>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">
+              <span class="btn__icon">▶</span> 查看作品
+            </a>
+            <a href="#contact" class="btn btn--ghost">
+              ✉ 联系我
+            </a>
+          </div>
+
+          <!-- 终端窗口 -->
+          <div class="terminal" aria-hidden="true">
+            <div class="terminal__bar">
+              <span class="terminal__dot terminal__dot--r"></span>
+              <span class="terminal__dot terminal__dot--y"></span>
+              <span class="terminal__dot terminal__dot--g"></span>
+              <span class="terminal__title">kyletang-0711@github: ~</span>
+            </div>
+            <div class="terminal__body">
+              <div><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
+              <div class="t-out">一名热爱折腾的建造者</div>
+              <div><span class="t-prompt">$</span> <span class="t-cmd">cat motto.txt</span></div>
+              <div class="t-out">保持好奇，持续构建。<span class="t-dim"># 代码即诗</span></div>
+              <div><span class="t-prompt">$</span> <span class="t-cmd">uptime</span></div>
+              <div class="t-out"><span id="uptimeCounter">刚刚</span> 开始，永远在迭代 <span class="t-ok">● running</span></div>
+            </div>
+          </div>
         </div>
       </div>
+
+      <a href="#about" class="hero__scroll-hint" aria-label="向下滚动">
+        <span>scroll</span>
+        <span class="hero__scroll-mouse"></span>
+      </a>
+    </header>
+
+    <!-- ══════════ 关于我 ══════════ -->
+    <section class="section" id="about">
+      <h2 class="section__title" data-reveal><span class="section__hash">##</span> 关于我 <span class="section__en">/about</span></h2>
+
+      <div class="about__grid">
+        <!-- ✏️ 修改区：自我介绍 -->
+        <div class="about__text" data-reveal>
+          <p>
+            你好！我是 <strong>Tang Tang</strong>。
+            我相信技术的价值在于<b>把想法变成现实</b>——
+            从一行代码到一个能用的工具，再到让人会心一笑的产品。
+          </p>
+          <p>
+            这个主页是我的数字名片，也是一块持续的画布：
+            新的项目会自动出现在
+            <a href="#github" class="link">GitHub 动态</a>区，
+            敬请期待。
+          </p>
+          <p class="about__quote">
+            「种一棵树最好的时间是十年前，其次是现在。」
+          </p>
+        </div>
+
+        <div class="about__stats" data-reveal>
+          <div class="stat-card">
+            <div class="stat-card__value" data-counter="2026" data-suffix="">—</div>
+            <div class="stat-card__label">启程之年</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value" data-counter="0" data-suffix="+">—</div>
+            <div class="stat-card__label">公开仓库 <span class="stat-card__hint">(自动同步)</span></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value" data-counter="100" data-suffix="%">—</div>
+            <div class="stat-card__label">热爱程度</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value">∞</div>
+            <div class="stat-card__label">好奇心</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 技能栈 ══════════ -->
+    <section class="section" id="skills">
+      <h2 class="section__title" data-reveal><span class="section__hash">##</span> 技能栈 <span class="section__en">/skills</span></h2>
+
+      <!-- ✏️ 修改区：按需增删技能分类 -->
+      <div class="skills__grid">
+
+        <div class="skill-card" data-reveal>
+          <div class="skill-card__icon">⌨</div>
+          <h3 class="skill-card__title">前端</h3>
+          <div class="skill-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag tag--dim">TypeScript</span>
+            <span class="tag tag--dim">Vue</span>
+            <span class="tag tag--dim">React</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-reveal>
+          <div class="skill-card__icon">⚙</div>
+          <h3 class="skill-card__title">后端</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Node.js</span>
+            <span class="tag tag--dim">FastAPI</span>
+            <span class="tag tag--dim">MySQL</span>
+            <span class="tag tag--dim">Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-reveal>
+          <div class="skill-card__icon">🤖</div>
+          <h3 class="skill-card__title">AI / 效率</h3>
+          <div class="skill-tags">
+            <span class="tag">Prompt 工程</span>
+            <span class="tag">AI 工作流</span>
+            <span class="tag tag--dim">RAG</span>
+            <span class="tag tag--dim">Agent</span>
+          </div>
+        </div>
+
+        <div class="skill-card" data-reveal>
+          <div class="skill-card__icon">🛠</div>
+          <h3 class="skill-card__title">工具链</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Linux</span>
+            <span class="tag tag--dim">Docker</span>
+          </div>
+        </div>
+
+      </div>
+      <p class="skills__note" data-reveal><span class="t-dim">// 说明：亮色为常用，暗色为了解 / 学习中。欢迎按自己的实际情况增删～</span></p>
+    </section>
+
+    <!-- ══════════ 精选项目 ══════════ -->
+    <section class="section" id="projects">
+      <h2 class="section__title" data-reveal><span class="section__hash">##</span> 精选项目 <span class="section__en">/projects</span></h2>
+
+      <!-- ✏️ 修改区：替换成你的真实项目。
+           复制整个 <article> 块即可新增项目卡 -->
+      <div class="projects__grid">
+
+        <article class="project-card" data-reveal>
+          <div class="project-card__top">
+            <span class="project-card__folder">▸</span>
+            <div class="project-card__links">
+              <a href="https://github.com/KyleTang-0711" target="_blank" rel="noopener" aria-label="GitHub 仓库">⌂</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">项目一 · 敬请期待</h3>
+          <p class="project-card__desc">
+            这里将展示你的第一个精选项目。写清楚它解决什么问题、
+            用了什么技术、亮点在哪，让访客 10 秒内产生兴趣。
+          </p>
+          <div class="project-card__tags">
+            <span class="tag tag--mini">占位</span>
+            <span class="tag tag--mini">待替换</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal>
+          <div class="project-card__top">
+            <span class="project-card__folder">▸</span>
+            <div class="project-card__links">
+              <a href="https://github.com/KyleTang-0711" target="_blank" rel="noopener" aria-label="GitHub 仓库">⌂</a>
+            </div>
+          </div>
+          <h3 class="project-card__title">项目二 · 敬请期待</h3>
+          <p class="project-card__desc">
+            建议挑选 2~4 个最能代表你的项目放在这里，
+            宁缺毋滥。可以放课程设计、比赛作品或开源贡献。
+          </p>
+          <div class="project-card__tags">
+            <span class="tag tag--mini">占位</span>
+            <span class="tag tag--mini">待替换</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card--cta" data-reveal>
+          <div class="project-card__top">
+            <span class="project-card__folder">✦</span>
+          </div>
+          <h3 class="project-card__title">你的项目将出现在这里</h3>
+          <p class="project-card__desc">
+            下方的「GitHub 动态」已经接好接口——
+            当你向 GitHub 推送新仓库时，这里会自动展示它们。
+          </p>
+          <a href="#github" class="btn btn--primary btn--sm">↓ 查看 GitHub 动态</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ══════════ GitHub 动态（实时） ══════════ -->
+    <section class="section" id="github">
+      <h2 class="section__title" data-reveal><span class="section__hash">##</span> GitHub 动态 <span class="section__en">/live</span></h2>
+      <p class="section__sub" data-reveal>
+        <span class="t-dim">$ curl api.github.com/users/</span><span class="t-user">KyleTang-0711</span><span class="t-dim">/repos</span>
+        <span class="live-badge"><span class="live-badge__dot"></span> LIVE</span>
+      </p>
+
+      <div class="repos__grid" id="reposGrid">
+        <!-- JS 动态渲染 -->
+        <div class="repos__loading">
+          <div class="repos__skeleton"></div>
+          <div class="repos__skeleton"></div>
+          <div class="repos__skeleton"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ 联系 ══════════ -->
+    <section class="section" id="contact">
+      <h2 class="section__title" data-reveal><span class="section__hash">##</span> 联系我 <span class="section__en">/contact</span></h2>
+
+      <div class="contact__wrap" data-reveal>
+        <p class="contact__lead">
+          无论是技术交流、项目合作，还是随便聊聊——
+          <br>我的收件箱永远向你敞开。
+        </p>
+
+        <!-- ✏️ 修改区：替换成你真实的联系方式 -->
+        <div class="contact__grid">
+          <a class="contact-card" href="https://github.com/KyleTang-0711" target="_blank" rel="noopener">
+            <div class="contact-card__icon">⌂</div>
+            <div>
+              <div class="contact-card__title">GitHub</div>
+              <div class="contact-card__value">github.com/KyleTang-0711</div>
+            </div>
+            <span class="contact-card__arrow">→</span>
+          </a>
+
+          <a class="contact-card" href="mailto:hello@example.com">
+            <div class="contact-card__icon">✉</div>
+            <div>
+              <div class="contact-card__title">Email</div>
+              <div class="contact-card__value">hello@example.com</div>
+            </div>
+            <span class="contact-card__arrow">→</span>
+          </a>
+
+          <a class="contact-card" href="https://kyletang-0711.github.io" target="_blank" rel="noopener">
+            <div class="contact-card__icon">◈</div>
+            <div>
+              <div class="contact-card__title">本站</div>
+              <div class="contact-card__value">kyletang-0711.github.io</div>
+            </div>
+            <span class="contact-card__arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════ 页脚 ══════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__line">
+        <span class="t-dim">©</span> 2026 <span class="t-user">Tang Tang</span>
+        <span class="t-dim">·</span> 用 <span class="heart">♥</span> 和 GitHub Pages 构建
+      </div>
+      <div class="footer__line footer__line--dim">
+        <span class="t-dim">$</span> echo "thanks for visiting" <span class="t-dim">&&</span> exit 0
+      </div>
     </div>
-  </body>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
